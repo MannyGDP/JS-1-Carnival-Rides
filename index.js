@@ -11,21 +11,13 @@ let waterIsOn = true
 
 //Ride 1 works when:
     // green wire is connected
-if (ride1PowerOn === true){
-    ride1PowerElement.style.color = "green"
-    ride1PowerElement.textContent = "Power Statys off"
-}
-else {
-ride1PowerElement.style.color = "red"
-ride1PowerElement.textContent = "Power Stats OOFFF"
-}
 
-(greenWireConnected){
+  if (greenWireConnected){
     ride1PowerOn = true
   }
+
 //Ride 2 works when 
     //green and yellow wires are connected
-ride2PowerOn = false
 if (greenWireConnected,yellowWireConnected){
     ride2PowerOn = true
 }
@@ -42,7 +34,9 @@ if (greenWireConnected,redWireConnected,waterIsOn){
 //Ride 4 has power when:
     //ride wire is connected
 ride4PowerOn = false
-
+if (redWireConnected){
+    ride4PowerOn = true
+}
 
 //Ride 4 is a slot machine
     //if a 1 is rolled it should return "star"
@@ -53,5 +47,22 @@ ride4PowerOn = false
     //if a 6 is rolled it should return "tiger"
     //if a 7 is rolled it should return "seven"
 function ride4SlotMachine(rolledNumber){
-    return "nothing"
+    switch (rolledNumber) {
+        case 1:
+            return "star"
+        case 2:
+            return"car"
+        case 3:
+            return "pot of gold"
+        case 4:
+            return "clover"
+        case 5:
+            return"bowling ball"
+        case 6:
+            return "tiger"
+        case 7:
+            return "seven"
+        default:
+            break;
+    }
 }
