@@ -11,8 +11,16 @@ let waterIsOn = true
 
 //Ride 1 works when:
     // green wire is connected
-ride1PowerOn === false
-if (greenWireConnected){
+if (ride1PowerOn === true){
+    ride1PowerElement.style.color = "green"
+    ride1PowerElement.textContent = "Power Statys off"
+}
+else {
+ride1PowerElement.style.color = "red"
+ride1PowerElement.textContent = "Power Stats OOFFF"
+}
+
+(greenWireConnected){
     ride1PowerOn = true
   }
 //Ride 2 works when 
